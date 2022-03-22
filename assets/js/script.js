@@ -30,8 +30,37 @@ $(".time-block").each(function() {
     
 };
 
-$(".time-block").on("click","textarea",function(){
-    var getElementId =  $(this).attr("id");
-    var getText=$(this).attr("id").val();
-    console.log(getText);
-})
+$(".saveBtn").on("click",function(){
+    var getElementId =  $(this).siblings("textarea").attr("id");
+    var getElementText =  $(this).siblings("textarea").val();
+    //console.log(getElementId);
+    //console.log(getElementText);
+    var event =
+        {
+        ID: getElementId,
+        Text: getElementText
+        }
+        setEvents(event);
+});
+
+function loadEvents(){
+    var myEvents = localStorage.getItem("events");
+
+    if(!myEvents){
+        return false;
+    }
+   
+    myEvents=JSON.parse(myEvents);
+    //console.log(myEvents);
+    $.each(myEvents, function(list, arr) {
+        //console.log(arr);
+        
+        arr.forEach(function() {
+            console.log(arr.ID);
+            //$(arr.ID).Text(arr.Text);
+          });
+        
+      });
+};
+
+loadEvents();
