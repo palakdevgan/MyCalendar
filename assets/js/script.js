@@ -20,16 +20,13 @@ $(".time-block").each(function () {
 
 function setEvents() {
   $('.saveBtn').on('click', function () {
-    // get nearby values
     var value = $(this)
       .siblings('.description')
       .val();
     var time = $(this)
       .parent()
       .attr('id');
-
-    // save in localStorage
-    localStorage.setItem(time, value);
+  localStorage.setItem(time, value);
   });
   $('#9 .description').val(localStorage.getItem('9'));
   $('#10 .description').val(localStorage.getItem('10'));
