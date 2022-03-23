@@ -9,6 +9,9 @@ It is a calendar application that allows a user to save events for each hour of 
 * JQuery
 * Bootstrap
 
+## Screenshot
+![Screenshot](https://github.com/palakdevgan/MyCalendar/blob/main/assets/images/Screenshot.jpg?raw=true)
+
 ## Website
 https://palakdevgan.github.io/MyCalendar/
 
